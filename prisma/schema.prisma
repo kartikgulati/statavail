@@ -1,0 +1,29 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Store {
+  id          Int          @id @default(autoincrement())
+  number      String       @unique
+  name        String
+  submissions Submission[]
+}
+
+model Submission {
+  id            String   @id @default(cuid())
+  name          String
+  storeId       Int
+  store         Store    @relation(fields: [storeId], references: [id])
+  startTime     String?  // null if allDay
+  endTime       String?  // null if allDay
+  allDay        Boolean  @default(false)
+  agreedAt      DateTime
+  signatureName String   // first + last typed signature
+  createdAt     DateTime @default(now())
+  pdfUrl        String?  // path to generated/stored PDF
+}
