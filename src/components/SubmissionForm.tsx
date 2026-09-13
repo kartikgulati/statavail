@@ -110,7 +110,7 @@ export default function SubmissionForm({ stores }: { stores: Store[] }) {
                 id="name"
                 value={formData.name}
                 onChange={(e) => setFormData({...formData, name: e.target.value})}
-                placeholder="John Doe"
+                placeholder="Ronald McDonald"
               />
             </div>
             <div className="space-y-2">
@@ -169,9 +169,10 @@ export default function SubmissionForm({ stores }: { stores: Store[] }) {
             <div className="p-4 bg-muted rounded-md text-sm h-48 overflow-y-auto">
               <p className="font-semibold mb-2">Statutory Holiday Agreement</p>
               <p>
-                I hereby confirm my availability for the specified statutory holiday. I understand that
-                this submission is used for scheduling purposes and does not guarantee a specific shift.
-                I agree to notify my store manager as soon as possible if my availability changes.
+                I hereby confirm my availability for the statutory holiday. I understand that
+                this submission is used for scheduling purposes and does not guarantee a specific shift. This availability is subject to change based on business needs and staffing requirements.
+                This availability submission is valid only for the upcoming statutory holiday and does not apply to your regualar availability.
+                I agree to notify my store manager/department manager as soon as possible if my availability changes.
               </p>
               <p className="mt-2">
                 By signing below, I certify that the information provided is accurate and I agree to the terms

@@ -4,11 +4,11 @@ const prisma = new PrismaClient();
 
 async function main() {
   const stores = [
-    { number: '101', name: 'Downtown Store' },
-    { number: '102', name: 'Uptown Store' },
-    { number: '103', name: 'West End Store' },
-    { number: '104', name: 'East Side Store' },
-    { number: '105', name: 'North Valley Store' },
+    { number: '40268', name: 'Fischer Hallman' },
+    { number: '40269', name: 'Uptown Store' },
+    { number: '40270', name: 'West End Store' },
+    { number: '40271', name: 'East Side Store' },
+    { number: '40272', name: 'North Valley Store' },
   ];
 
   console.log('Seeding stores...');
