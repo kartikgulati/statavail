@@ -169,10 +169,21 @@ export default function SubmissionForm({ stores }: { stores: Store[] }) {
             <div className="p-4 bg-muted rounded-md text-sm h-48 overflow-y-auto">
               <p className="font-semibold mb-2">Statutory Holiday Agreement</p>
               <p>
-                I hereby confirm my availability for the statutory holiday. I understand that
-                this submission is used for scheduling purposes and does not guarantee a specific shift. This availability is subject to change based on business needs and staffing requirements.
-                This availability submission is valid only for the upcoming statutory holiday and does not apply to your regualar availability.
-                I agree to notify my store manager/department manager as soon as possible if my availability changes.
+                I hereby confirm my availability to work on the upcoming statutory holiday. I understand that this submission is provided for scheduling purposes and does not guarantee a specific shift, position, or number of hours.
+
+                <p className="mt-2">
+                   I acknowledge that my availability may be subject to change based on business needs, operational requirements, and staffing levels.
+                </p>
+
+               
+              <p className="mt-2">
+              This availability submission applies only to the upcoming statutory holiday and does not modify or replace my regular availability.
+              </p>
+                
+              <p className="mt-2">
+
+                I agree to notify my Store Manager or Department Manager as soon as possible should my availability change.
+                </p>
               </p>
               <p className="mt-2">
                 By signing below, I certify that the information provided is accurate and I agree to the terms
