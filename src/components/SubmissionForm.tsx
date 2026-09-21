@@ -146,18 +146,22 @@ export default function SubmissionForm({ stores }: { stores: Store[] }) {
                   <Input
                     id="startTime"
                     type="time"
+                    className="h-11 min-w-0 appearance-none sm:h-8"
                     value={formData.startTime}
                     onChange={(e) => setFormData({...formData, startTime: e.target.value})}
                   />
+                  <p className="text-xs text-muted-foreground">Select a time in 24-hour format</p>
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="endTime">End Time</Label>
                   <Input
                     id="endTime"
                     type="time"
+                    className="h-11 min-w-0 appearance-none sm:h-8"
                     value={formData.endTime}
                     onChange={(e) => setFormData({...formData, endTime: e.target.value})}
                   />
+                  <p className="text-xs text-muted-foreground">Select a time in 24-hour format</p>
                 </div>
               </div>
             )}
