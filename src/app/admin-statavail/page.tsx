@@ -2,11 +2,11 @@ import { prisma } from '@/lib/prisma';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { buttonVariants } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { format } from 'date-fns';
 import Link from 'next/link';
 import AdminFilters from '@/components/AdminFilters';
 import AdminSubmissionActions from '@/components/AdminSubmissionActions';
 import { cn } from '@/lib/utils';
+import { formatSubmissionTimestamp } from '@/lib/date';
 
 export default async function AdminPage({
   searchParams,
@@ -64,7 +64,7 @@ export default async function AdminPage({
                       <TableCell>
                         {s.allDay ? 'All Day' : `${s.startTime} - ${s.endTime}`}
                       </TableCell>
-                      <TableCell>{format(s.createdAt, 'PPP p')}</TableCell>
+                      <TableCell>{formatSubmissionTimestamp(s.createdAt)}</TableCell>
                       <TableCell className="text-right">
                         <AdminSubmissionActions submissionId={s.id} submissionName={s.name} />
                       </TableCell>
