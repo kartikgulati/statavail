@@ -1,10 +1,11 @@
 import { prisma } from '@/lib/prisma';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { Button, buttonVariants } from '@/components/ui/button';
+import { buttonVariants } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { format } from 'date-fns';
 import Link from 'next/link';
 import AdminFilters from '@/components/AdminFilters';
+import AdminSubmissionActions from '@/components/AdminSubmissionActions';
 import { cn } from '@/lib/utils';
 
 export default async function AdminPage({
@@ -65,9 +66,7 @@ export default async function AdminPage({
                       </TableCell>
                       <TableCell>{format(s.createdAt, 'PPP p')}</TableCell>
                       <TableCell className="text-right">
-                        <a href={`/api/pdf/${s.id}`} target="_blank" rel="noopener noreferrer" className={cn(buttonVariants({ variant: 'ghost', size: 'sm' }))}>
-                          Download PDF
-                        </a>
+                        <AdminSubmissionActions submissionId={s.id} submissionName={s.name} />
                       </TableCell>
                     </TableRow>
                   ))}

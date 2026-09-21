@@ -70,13 +70,20 @@ export default function ConfirmationPDF({ submission, store }: { submission: Sub
           <View style={styles.agreementBox}>
             <Text>Statutory Holiday Agreement</Text>
             <Text style={{ marginTop: 4 }}>
-              I hereby confirm my availability for the specified statutory holiday. I understand that
-              this submission is used for scheduling purposes and does not guarantee a specific shift.
-              I agree to notify my store manager as soon as possible if my availability changes.
+              I hereby confirm my availability to work on the upcoming statutory holiday. I understand that this submission is provided for scheduling purposes and does not guarantee a specific shift, position, or number of hours.
             </Text>
             <Text style={{ marginTop: 4 }}>
-              By signing below, I certify that the information provided is accurate and I agree to the terms
-              of the holiday scheduling policy.
+               I acknowledge that my availability may be subject to change based on business needs, operational requirements, and staffing levels.
+            </Text>
+            <Text style={{ marginTop: 4 }}>
+               This availability submission applies only to the upcoming statutory holiday and does not modify or replace my regular availability.
+            </Text>
+            <Text style={{ marginTop: 4 }}>
+                I agree to notify my Store Manager or Department Manager as soon as possible should my availability change.
+            </Text>
+               <Text style={{ marginTop: 4 }}>
+                By signing below, I certify that the information provided is accurate and I agree to the terms
+                of the holiday scheduling policy.
             </Text>
           </View>
         </View>
