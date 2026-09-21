@@ -44,7 +44,7 @@ export default function AdminSubmissionActions({
   }
 
   return (
-    <div className="flex justify-end gap-2">
+    <div className="flex justify-end gap-2 whitespace-nowrap">
       <a
         href={`/api/pdf/${submissionId}`}
         target="_blank"

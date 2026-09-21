@@ -74,7 +74,7 @@ export default function SubmissionForm({ stores }: { stores: Store[] }) {
 
   if (step === 3) {
     return (
-      <Card className="max-w-lg mx-auto">
+      <Card className="mx-auto w-full max-w-lg">
         <CardHeader>
           <CardTitle>Submission Confirmed!</CardTitle>
           <CardDescription>Thank you for submitting your availability.</CardDescription>
@@ -92,7 +92,7 @@ export default function SubmissionForm({ stores }: { stores: Store[] }) {
   }
 
   return (
-    <Card className="max-w-lg mx-auto">
+    <Card className="mx-auto w-full max-w-lg">
       <CardHeader>
         <CardTitle>{step === 1 ? 'Availability' : 'Agreement'}</CardTitle>
         <CardDescription>
@@ -140,7 +140,7 @@ export default function SubmissionForm({ stores }: { stores: Store[] }) {
               <Label htmlFor="allDay">Available all day</Label>
             </div>
             {!formData.allDay && (
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div className="space-y-2">
                   <Label htmlFor="startTime">Start Time</Label>
                   <Input
@@ -198,7 +198,7 @@ export default function SubmissionForm({ stores }: { stores: Store[] }) {
               />
               <Label htmlFor="agreed">I have read and agree to the above</Label>
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <div className="space-y-2">
                 <Label htmlFor="firstName">First Name (Signature)</Label>
                 <Input
@@ -219,18 +219,18 @@ export default function SubmissionForm({ stores }: { stores: Store[] }) {
           </div>
         )}
       </CardContent>
-      <CardFooter className="flex justify-between">
+      <CardFooter className="flex flex-col-reverse gap-3 sm:flex-row sm:justify-between">
         {step === 2 && (
           <Button variant="outline" onClick={() => setStep(1)} disabled={loading}>
             Back
           </Button>
         )}
-        <div className="ml-auto">
+        <div className="w-full sm:ml-auto sm:w-auto">
           {step === 1 && (
-            <Button onClick={handleNext}>Next</Button>
+            <Button className="w-full sm:w-auto" onClick={handleNext}>Next</Button>
           )}
           {step === 2 && (
-            <Button onClick={handleSubmit} disabled={loading || !formData.agreed || !formData.firstName || !formData.lastName}>
+            <Button className="w-full sm:w-auto" onClick={handleSubmit} disabled={loading || !formData.agreed || !formData.firstName || !formData.lastName}>
               {loading ? 'Submitting...' : 'Submit'}
             </Button>
           )}

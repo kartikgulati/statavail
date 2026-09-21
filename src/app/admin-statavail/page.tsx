@@ -27,14 +27,14 @@ export default async function AdminPage({
   });
 
   return (
-    <main className="min-h-screen bg-slate-50 py-12 px-4">
-      <div className="max-w-6xl mx-auto space-y-8">
-        <div className="flex justify-between items-center">
+    <main className="min-h-screen bg-slate-50 px-3 py-6 sm:px-4 sm:py-12">
+      <div className="mx-auto max-w-6xl space-y-6 sm:space-y-8">
+        <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div className="space-y-2">
-            <h1 className="text-3xl font-bold tracking-tight">Admin Panel</h1>
+            <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">Admin Panel</h1>
             <p className="text-muted-foreground">Review and manage stat day availability submissions.</p>
           </div>
-          <Link href="/" className={cn(buttonVariants({ variant: 'outline' }))}>
+          <Link href="/" className={cn(buttonVariants({ variant: 'outline' }), 'w-full sm:w-auto')}>
             Back to Home
           </Link>
         </div>
@@ -45,8 +45,8 @@ export default async function AdminPage({
           </CardHeader>
           <CardContent>
             <AdminFilters />
-            <div className="rounded-md border">
-              <Table>
+            <div className="overflow-x-auto rounded-md border">
+              <Table className="min-w-[760px]">
                 <TableHeader>
                   <TableRow>
                     <TableHead>Name</TableHead>

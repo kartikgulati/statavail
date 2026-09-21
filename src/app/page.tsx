@@ -7,10 +7,10 @@ export default async function HomePage() {
   });
 
   return (
-    <main className="min-h-screen bg-slate-50 py-12 px-4">
-      <div className="max-w-4xl mx-auto space-y-8">
-        <div className="text-center space-y-2">
-          <h1 className="text-3xl font-bold tracking-tight">Statutory Availability</h1>
+    <main className="min-h-screen bg-slate-50 px-3 py-6 sm:px-4 sm:py-12">
+      <div className="mx-auto max-w-4xl space-y-6 sm:space-y-8">
+        <div className="space-y-2 text-center">
+          <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">Statutory Availability</h1>
           <p className="text-muted-foreground">Please submit your availability for the upcoming statutory holiday.</p>
         </div>
         <SubmissionForm stores={stores} />

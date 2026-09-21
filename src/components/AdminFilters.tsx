@@ -22,16 +22,16 @@ export default function AdminFilters() {
   };
 
   return (
-    <div className="flex gap-4 mb-6">
+    <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
       <Input
         placeholder="Search name..."
-        className="max-w-xs"
+        className="w-full sm:max-w-xs"
         defaultValue={searchParams.get('name') || ''}
         onChange={(e) => updateFilter('name', e.target.value)}
       />
       <Input
         placeholder="Store number..."
-        className="max-w-xs"
+        className="w-full sm:max-w-xs"
         defaultValue={searchParams.get('store') || ''}
         onChange={(e) => updateFilter('store', e.target.value)}
       />
