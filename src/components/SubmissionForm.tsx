@@ -28,6 +28,7 @@ export default function SubmissionForm({ stores }: { stores: Store[] }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [submissionId, setSubmissionId] = useState<string | null>(null);
+  const selectedStore = stores.find((store) => store.id.toString() === formData.storeId);
 
   const handleNext = () => {
     if (!formData.name || !formData.storeId) {
@@ -119,8 +120,10 @@ export default function SubmissionForm({ stores }: { stores: Store[] }) {
                 value={formData.storeId}
                 onValueChange={(val) => setFormData({...formData, storeId: val || ''})}
               >
-                <SelectTrigger>
-                  <SelectValue placeholder="Select Store" />
+                <SelectTrigger className="h-11 w-full min-w-0 sm:h-8">
+                  <SelectValue placeholder="Select Store">
+                    {selectedStore ? `${selectedStore.number} - ${selectedStore.name}` : undefined}
+                  </SelectValue>
                 </SelectTrigger>
                 <SelectContent>
                   {stores.map(store => (
@@ -150,7 +153,7 @@ export default function SubmissionForm({ stores }: { stores: Store[] }) {
                     value={formData.startTime}
                     onChange={(e) => setFormData({...formData, startTime: e.target.value})}
                   />
-                  <p className="text-xs text-muted-foreground">Select a time in 24-hour format</p>
+                  <p className="text-xs text-muted-foreground">Select a rounded time, such as 8:00, 12:00, or 16:00</p>
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="endTime">End Time</Label>
@@ -161,7 +164,7 @@ export default function SubmissionForm({ stores }: { stores: Store[] }) {
                     value={formData.endTime}
                     onChange={(e) => setFormData({...formData, endTime: e.target.value})}
                   />
-                  <p className="text-xs text-muted-foreground">Select a time in 24-hour format</p>
+                  <p className="text-xs text-muted-foreground">Select a rounded time, such as 8:00, 11:00, or 12:00</p>
                 </div>
               </div>
             )}
