@@ -1,5 +1,6 @@
 import { Document, Page, Text, View, StyleSheet, Font } from '@react-pdf/renderer';
 import { Submission, Store } from '@prisma/client';
+import { format } from 'date-fns';
 
 const styles = StyleSheet.create({
   page: {
@@ -95,7 +96,7 @@ export default function ConfirmationPDF({ submission, store }: { submission: Sub
           </View>
           <View style={{ textAlign: 'right' }}>
             <Text style={styles.label}>Timestamp</Text>
-            <Text style={styles.value}>{new Date(submission.agreedAt).toLocaleString()}</Text>
+            <Text style={styles.value}>{format(new Date(submission.agreedAt), 'MM/dd/yyyy h:mm a')}</Text>
           </View>
         </View>
       </Page>
