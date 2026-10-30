@@ -66,28 +66,29 @@ export default function ConfirmationPDF({ submission, store }: { submission: Sub
           </Text>
         </View>
 
-        <View style={styles.section}>
-          <Text style={styles.label}>Agreement</Text>
-          <View style={styles.agreementBox}>
-            <Text>Statutory Holiday Agreement</Text>
-            <Text style={{ marginTop: 4 }}>
-              I hereby confirm my availability to work on the upcoming statutory holiday. I understand that this submission is provided for scheduling purposes and does not guarantee a specific shift, position, or number of hours.
-            </Text>
-            <Text style={{ marginTop: 4 }}>
-               I acknowledge that my availability may be subject to change based on business needs, operational requirements, and staffing levels.
-            </Text>
-            <Text style={{ marginTop: 4 }}>
-               This availability submission applies only to the upcoming statutory holiday and does not modify or replace my regular availability.
-            </Text>
-            <Text style={{ marginTop: 4 }}>
-                I agree to notify my Store Manager or Department Manager as soon as possible should my availability change.
-            </Text>
-               <Text style={{ marginTop: 4 }}>
-                By signing below, I certify that the information provided is accurate and I agree to the terms
-                of the holiday scheduling policy.
-            </Text>
-          </View>
-        </View>
+       
+<View style={styles.section}>
+  <Text style={styles.label}>Agreement</Text>
+  <View style={styles.agreementBox}>
+    <Text>Statutory Holiday Availability Agreement</Text>
+    <Text style={{ marginTop: 4 }}>
+      I hereby confirm my availability to work on the applicable statutory holidays in 2026. I understand that submitting my availability does not guarantee a scheduled shift, specific position, or number of working hours.
+    </Text>
+    <Text style={{ marginTop: 4 }}>
+      I acknowledge that scheduling decisions are subject to business needs, operational requirements, and staffing levels.
+    </Text>
+    <Text style={{ marginTop: 4 }}>
+      This availability submission applies only to the statutory holiday(s) specified in this submission and does not modify or replace my regular availability.
+    </Text>
+    <Text style={{ marginTop: 4 }}>
+      I agree to notify my Store Manager or Department Manager as soon as possible if my submitted availability changes.
+    </Text>
+    <Text style={{ marginTop: 4 }}>
+      By signing below, I confirm that the information provided is accurate and acknowledge the terms outlined in this agreement and the applicable holiday scheduling policy.
+    </Text>
+  </View>
+</View>
+
 
         <View style={styles.footer}>
           <View>
