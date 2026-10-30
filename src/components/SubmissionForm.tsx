@@ -176,25 +176,24 @@ export default function SubmissionForm({ stores }: { stores: Store[] }) {
             <div className="p-4 bg-muted rounded-md text-sm h-48 overflow-y-auto">
               <p className="font-semibold mb-2">Statutory Holiday Agreement</p>
               <p>
-                I hereby confirm my availability to work on the upcoming statutory holiday. I understand that this submission is provided for scheduling purposes and does not guarantee a specific shift, position, or number of hours.
+                  I hereby confirm my availability to work on the applicable statutory holidays in 2026. I understand that submitting my availability does not guarantee a scheduled shift, specific position, or number of working hours.
 
                 <p className="mt-2">
-                   I acknowledge that my availability may be subject to change based on business needs, operational requirements, and staffing levels.
+                    I acknowledge that scheduling decisions are subject to business needs, operational requirements, and staffing levels.
                 </p>
 
                
               <p className="mt-2">
-              This availability submission applies only to the upcoming statutory holiday and does not modify or replace my regular availability.
+              This availability submission applies only to the statutory holiday(s) specified in this submission and does not modify or replace my regular availability.
               </p>
                 
               <p className="mt-2">
 
-                I agree to notify my Store Manager or Department Manager as soon as possible should my availability change.
+                I agree to notify my Store Manager or Department Manager as soon as possible if my submitted availability changes.
                 </p>
               </p>
               <p className="mt-2">
-                By signing below, I certify that the information provided is accurate and I agree to the terms
-                of the holiday scheduling policy.
+                 By signing below, I confirm that the information provided is accurate and acknowledge the terms outlined in this agreement and the applicable holiday scheduling policy.
               </p>
             </div>
             <div className="flex items-center space-x-2">
